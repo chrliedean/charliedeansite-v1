@@ -1,0 +1,789 @@
+/*! HTML5 Boilerplate v6.1.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap');
+
+:root {
+  --accent: #1c9967;
+  --accent-transparent: #1c9967cc;
+}
+
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body {
+	font-family: 'Inconsolata', monospace;
+  background: #eeeeee;
+}
+
+input:focus {
+    outline: none;
+    border: 0;
+}
+#wrapper {
+	width: 100%;
+	max-width: 500px;
+	margin: 0 auto;
+	padding: 25px;
+	box-sizing: border-box;
+}
+
+#wrapper-gallery {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 25px;
+  box-sizing: border-box;
+  font-family: --apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+
+.featherlight-content {
+  border: 5px solid var(--accent);
+}
+
+h1#title {
+	font-family: -apple-system, BlinkMacSystemFont,'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+	font-size: 20pt;
+  font-weight: 800;
+	display: inline-block;
+	border-bottom: 5px solid var(--accent);
+	margin: 0 0 5px 0;
+
+}
+
+section {
+}
+
+h2 {
+	font-family: -apple-system, BlinkMacSystemFont,'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+	font-size: 13pt;
+	border-bottom: 3px solid var(--accent);
+	text-align: right;
+}
+
+h2.home {
+  transform: rotate(90deg);
+  display: block;
+  position: absolute;
+  margin-left: -40px;
+  border-top: 3px solid var(--accent);
+  border-bottom: none;
+
+}
+
+#wrapper-gallery h2 {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#category-selector {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#category-selector li {
+  display: inline-block;
+  border: 1px solid #000;
+  border-radius: 3px;
+  padding: 2px 8px 1px 8px;
+  margin: 5px;
+  flex-shrink: 0;
+  font-weight: 700;
+  box-shadow: inset 0 0 0 0 var(--accent);
+  transition: .4s ease all;
+}
+
+#category-selector li:hover {
+  cursor: pointer;
+  color: #FFF;
+  border-color: var(--accent);
+  box-shadow: inset 150px 0 0 0 var(--accent);
+}
+
+.details {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+#headertext {
+	display: inline-block;
+  font-family: 'Inconsolata', monospace;
+}
+
+#me {
+    background-image: url("/img/me.png");
+	position: absolute;
+    background-position: top;
+    background-size: 150px;
+	top: -30px; right: 0;
+	height: 168px;
+	width: 150px;
+    background-repeat: no-repeat;
+}
+
+#me:hover {
+	background-position: bottom;
+}
+
+
+header {
+	position: relative;
+	margin: 0;
+	margin-bottom: 25px;
+}
+
+#wrapper-gallery header {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto 25px auto;
+}
+
+h1 a:link {
+    border: none;
+    background-image: linear-gradient(to right, transparent 50%, var(--accent) 50%);
+
+}
+
+h1 a:hover {
+    background-position: -100%;
+   color: #FFFFFF;
+}
+
+h1 a:active {
+    color: #000;
+}
+
+a:link {
+	color: inherit;
+	text-decoration: none;
+	border-bottom: 1px dotted #000;
+	background-image: linear-gradient(to right, transparent 50%, var(--accent-transparent) 50%);
+	background-position: 0;
+	background-size: 200%;
+	transition: .2s ease all;
+}
+
+/* THUMBNAILS FOR hOMEPAGE */
+figure {
+  height: 100px;
+  width: 100%;
+  background-size: cover;
+  background-position: 50% 50%;
+  margin: 15px 0 0 0;
+  border-radius: 5px;
+  text-align: center;
+  transition: .3s ease all;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-blend-mode: overlay;
+  box-shadow: inset 0 0 0 0 80;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+figure:hover {
+  transition: .4s ease all;
+  box-shadow: inset 500px 0 0 0 var(--accent-transparent);
+  font-size: 18pt;
+}
+
+figure:active {
+  transition: 0s;
+  box-shadow: inset 500px 0 0 0 var(--accent);
+}
+
+figure:active figcaption {
+  color: #000;
+  text-shadow: none;
+}
+
+figcaption {
+  color: #eee;
+  display: block;
+  text-shadow: 0 0 3px #000;
+  font-family: -apple-system, BlinkMacSystemFont,'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+
+}
+
+
+
+#wrapper h2 {
+  margin-bottom: -3px;
+}
+
+#sink {background-image: url('/img/thumbs/sink.2.jpg');}
+#lone {background-image: url('/img/thumbs/lone.jpg');}
+#rashful {background-image: url('/img/thumbs/rashful.jpg')}
+#eggs {background-image: url('/img/thumbs/egg.jpg')}
+#holiday {background-image: url('/img/thumbs/holiday.jpg');}
+#juul {background-image: url('/img/thumbs/juul.jpg');}
+#jump {background-image: url('/img/thumbs/jump.jpg');}
+#vacation {background-image: url('/img/thumbs/vacation.jpg')}
+#cup-fig {background-image: url('/img/thumbs/cup2.jpg')}
+#cup2-fig {background-image: url('/img/thumbs/cup.jpg');}
+#tape-fig {background-image: url('/img/thumbs/tape.jpg')}
+#spin {background-image: url('/img/thumbs/spin.jpg');}
+#working {background-image: url('/img/thumbs/working.jpg');}
+#read {background-image: url('/img/thumbs/read.jpg'); background-color: rgba(0, 0, 0, 0.5);}
+#icecream {background-image: url('/img/thumbs/icecream.jpg'); background-color: rgba(0, 0, 0, 0.3);}
+#shave {background-image: url('/img/thumbs/shave.jpg');}
+#laura {background-image: url('/img/thumbs/laura.jpg');}
+#semiotic {background-image: url('/img/thumbs/semiotic.jpg');}
+#believe {background-image: url('/img/thumbs/believe.jpg');}
+#phone {background-image: url('/img/thumbs/phone.jpg');}
+
+
+
+section  ul {
+	list-style-type: none;
+	margin-left: 0;
+  padding: 0;
+}
+
+section ul li {
+	margin-top: 6px;
+  list-style-position: inside;
+}
+
+section ul li:before {
+	display: inline-block;
+	content: "-";
+}
+
+a:visited {
+	color: inherit;
+}
+
+a:hover {
+	background-position: -100%;
+  color: #000;
+}
+
+a:active {
+	transition: 0s;
+	background-image: linear-gradient(to right, var(--accent) 50%, var(--accent) 50%);
+	color: #FFF;
+}
+
+.video {
+	display: none;
+	height: 100%;
+}
+
+.video p {
+	margin-bottom: 0;
+}
+
+.resp169 {
+	position: relative;
+	overflow: hidden;
+	padding-top: 56.25%;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.resp169 iframe {
+	position: absolute;
+	top: 0; left: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+
+.resp916 {
+    overflow: hidden;
+    position: relative;
+	padding-bottom: 177.78%;
+    width: auto;
+    height: 100%;
+}
+
+.resp916 iframe {
+	position: absolute;
+    left: 0; bottom: 0;
+	border: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.resp11 {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 100%;
+    width: 100%;
+}
+
+.resp11 iframe {
+    position: absolute;
+	top: 0; left: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+
+body:after {
+    display: none;
+    content: url(/img/me2.png);
+}
+
+#drawing {
+    width: 70px;
+    height: 130px;
+    margin: 70px auto 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+
+input {
+    border-radius: 0;
+    box-sizing: border-box;
+    margin: 0;
+    width: 100%;
+    display: block;
+    padding: 5px;
+    border: 0;
+    border-bottom: 2px solid var(--accent);
+    outline: 0;
+    transition: .4s ease all;
+    background: #efefef;
+}
+
+#name {
+    float: left;
+    width: 49%;
+}
+
+#email {
+    width: 49%;
+    float: right;
+}
+
+input:focus {
+    border-bottom: 4px solid var(--accent);
+    background-color: rgba(28, 153, 103, 0.2);
+}
+
+label {
+    display: block;
+    margin-bottom: 15px;
+}
+
+textarea {
+    border-radius: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 200px;
+    display: block;
+    padding: 5px;
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid var(--accent);
+    transition: .2s ease all;
+    background: #efefef;
+    resize: none;
+
+}
+
+textarea:focus {
+    border-bottom: 4px solid var(--accent);
+    background-color: rgba(28, 153, 103, 0.2);
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    border: 0;
+    outline: 0;
+    border: 2px solid #4F186E;
+    font-family: -apple-system, BlinkMacSystemFont,'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-weight: 700;
+    transition: .2s ease all;
+    background-color: #FFF;
+    background-image: linear-gradient(to right, transparent 50%, yellow 50%);
+    background-position: 0;
+    background-size: 204%;
+}
+
+button:hover {
+    background-position: -100%;
+    cursor: pointer;
+}
+
+button:active {
+    background-image: none;
+    background: #4F186E;
+    color: #FFF;
+}
+
+img {
+    display: block;
+    width: 100%;
+    margin: 0 0 15px 0;
+}
+
+#wrapper-gallery p {
+  max-width: 500px;
+  width: 100%;
+  margin: 15px auto 15px auto;
+}
+
+#wrapper-gallery .caption {
+  border: 2px dashed #000;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: -5px;
+  font-family: 'Inconsolata', monospace;
+
+}
+
+#wrapper-404 {
+  width: 100%;
+	max-width: 500px;
+	margin: 0 auto;
+	padding: 25px;
+	box-sizing: border-box;
+  color: #FFF !important;
+  z-index: 999 !important;
+  position: relative;
+}
+
+
+
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none !important;
+  overflow: hidden;
+}
+
+.video-bg iframe {
+  pointer-events: none !important;
+  z-index: -5;
+  height: 100vh;
+  width: 100vw;
+  min-width: 100vh;
+  min-height: 100vw;
+  position: absolute;
+}
+
+@media only screen and (max-width: 400px) {
+    #name {
+        float: none;
+        width: 100%;
+    }
+
+    #email {
+        float: none;
+        width: 100%;
+    }
+}
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+
+
+.hidden {
+    display: none !important
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #424242 !important;
+    color: #eeeeee;
+  }
+
+  a:link {
+    color: #eeeeee;
+    background-image: linear-gradient(to right, transparent 50%, var(--accent) 50%);
+    border-color: #eeeeee;
+  }
+
+  a:visited {
+    color: #eeeeee;
+  }
+
+  #drawing {
+    filter: invert();
+  }
+
+  #wrapper-gallery .caption {
+    border-color: #FFF;
+  }
+
+}
+
+
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster */
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

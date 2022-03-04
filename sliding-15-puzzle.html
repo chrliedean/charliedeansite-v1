@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="15puzzle.css?x=1" />
+<link rel="canonical" href="https://ruwix.com/online-puzzle-simulators/sliding-15-puzzle/" />
+<link rel="shortcut icon" href="https://ruwix.com/favicon.ico"/>
+<link rel="apple-touch-icon" href="https://ruwix.com/online-puzzle-simulators/sliding-15-puzzle/sliding-15-puzzle.jpg"/>
+<title>15-Puzzle With Custom Image</title>
+<meta name="apple-mobile-web-app-title" content="Sliding 15 Puzzle"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Set up a sliding puzzle with your own image and challenge your friends to solve it. Use any image URL from the web. The generated puzzle will work on mobile devices as well"/>
+<meta name="Keywords" content="sliding,15-puzzle,image">
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://ruwix.com/online-puzzle-simulators/sliding-15-puzzle/"/>
+<meta property="og:title" content="Solve the Sliding 15-Puzzle"/>
+<meta property="og:image" content="https://ruwix.com/online-puzzle-simulators/sliding-15-puzzle/sliding-15-puzzle.jpg"/>
+<meta property="og:description" content="Set up a sliding puzzle with your own image and challenge your friends to solve it. Use any image URL from the web. The generated puzzle will work on mobile devices as well"/>
+<script async=true>!function(){var e=window.location.hostname,t=document.createElement("script"),a=document.getElementsByTagName("script")[0],n="https://quantcast.mgr.consensu.org".concat("/choice/","xncav4ssEzwLp","/",e,"/choice.js"),i=0;t.async=!0,t.type="text/javascript",t.src=n,a.parentNode.insertBefore(t,a),function(){function e(){var t=s.document,a=!!s.frames[i];if(!a)if(t.body){var n=t.createElement("iframe");n.style.cssText="display:none",n.name=i,t.body.appendChild(n)}else setTimeout(e,5);return!a}function t(){var e,t=arguments;if(!t.length)return o;if("setGdprApplies"===t[0])t.length>3&&2===t[2]&&"boolean"==typeof t[3]&&(e=t[3],"function"==typeof t[2]&&t[2]("set",!0));else if("ping"===t[0]){var a={gdprApplies:e,cmpLoaded:!1,cmpStatus:"stub"};"function"==typeof t[2]&&t[2](a)}else o.push(t)}function a(e){var t="string"==typeof e.data,a={};try{a=t?JSON.parse(e.data):e.data}catch(e){}var n=a.__tcfapiCall;n&&window.__tcfapi(n.command,n.version,function(a,i){var o={__tcfapiReturn:{returnValue:a,success:i,callId:n.callId}};t&&(o=JSON.stringify(o)),e.source.postMessage(o,"*")},n.parameter)}for(var n,i="__tcfapiLocator",o=[],s=window;s;){try{if(s.frames[i]){n=s;break}}catch(e){}if(s===window.top)break;s=s.parent}n||(e(),s.__tcfapi=t,s.addEventListener("message",a,!1))}();var o=function(){var e=arguments;typeof window.__uspapi!==o&&setTimeout(function(){void 0!==window.__uspapi&&window.__uspapi.apply(window.__uspapi,e)},500)},s=function(){i++,window.__uspapi===o&&i<3?console.warn("USP is not accessible"):clearInterval(c)};if(void 0===window.__uspapi){window.__uspapi=o;var c=setInterval(s,6e3)}}();</script>
+<script data-cfasync="false">var freestar = freestar || {};freestar.hitTime = Date.now();freestar.queue = freestar.queue || [];freestar.config = freestar.config || {};freestar.debug = window.location.search.indexOf('fsdebug') === -1 ? false : true;freestar.config.enabled_slots = [];!function(a,b){var c=b.getElementsByTagName("script")[0],d=b.createElement("script"),e="https://a.pub.network/ruwix-com";e+=freestar.debug?"/qa/pubfig.min.js":"/pubfig.min.js",d.async=!0,d.src=e,c.parentNode.insertBefore(d,c)}(window,document);freestar.initCallback = function () { (freestar.config.enabled_slots.length === 0) ? freestar.initCallbackCalled = false : freestar.newAdSlots(freestar.config.enabled_slots) }</script>
+</head>
+<body onkeyup="if (event.keyCode == 37) {balGomb();} if (event.keyCode == 38) {felGomb();} if (event.keyCode == 39) {jobbGomb();} if (event.keyCode == 40) {leGomb();}">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&appId=278945318846092&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="header">
+	<a class="logo" title="Ruwix Home Page" href="https://ruwix.com"><img src="/pics/logo2015-small.png" alt="Ruwix logo" /></a>
+	<nav>
+		<ul>
+			<li><a href="/online-puzzle-simulators/">More Puzzles</a></li>
+			<li><a href="/the-rubiks-cube/">Rubik's Cube</a></li>
+			<li><a href="/twisty-puzzles/">Twisty Puzzles</a></li>
+		</ul>
+	</nav>
+	<div class="clearboth"></div>
+</div>
+<div id="jatekTer">
+</div>	
+<div class="buttonz upperButtonz">
+	<div onClick="instantScramble();" class="myButton scrambleGomb">
+		Scramble
+	</div>
+	<div class="stepCounter">
+		<span id="lepesSzamoloUp"> </span>
+	</div>
+	<a href="/twisty-puzzles/sliding-15-puzzle/" title="How to solve the 15-puzzle" class="myButton howToSolve">
+		How to solve?
+	</a>
+	<div class="clearboth">
+	</div>
+</div>
+<div class="headerMobile">
+	<a class="logo" title="Ruwix Home Page" href="https://ruwix.com"><img src="/pics/logo2015-small.png" alt="Ruwix logo" /></a>
+	<nav>
+		<ul>
+			<li><a href="/online-puzzle-simulators/">More Puzzles</a></li>
+			<li><a href="/the-rubiks-cube/">Rubik's Cube</a></li>
+			<li><a href="/twisty-puzzles/">Twisty Puzzles</a></li>
+		</ul>
+	</nav>
+	<div class="clearboth"></div>
+</div>	
+<div class="controlok">
+	<div class="controlbacktransp">		
+		<h2>Create a puzzle with your own image!</h2>
+		<p>Set up your own image and save the link of the generated page to challenge your friends! <br /> All your settings and your image will be encoded in your URL.</p>
+		<div class="szetting">
+			<input type="radio" id="valasztott1" name="rate" value="1" checked="checked"><label>Your image URL <span>(preferably square) (<a href="https://postimage.org/" rel="external nofollow" target="_blank">Upload</a>)</span>:</label><input class="css-input" type="text" name="neveje" id="urlinput" value="" />
+		</div>
+		<div>
+			<em>To get the URL of an image in Google Chrome right click the image then 'Copy&nbsp;image&nbsp;address'.</em>
+		</div>
+		<div class="szetting" style="display: none;">
+			<input type="radio" id="valasztott2" name="rate" value="2"><label>Facebook profile id <span>(Ex: Rihanna)</span>:</label><input class="css-input" type="text" name="faszbukje" id="facebookinput" value="" />
+		</div>
+		<div class="szetting">
+			<label><input id="stretchSquare" type="checkbox" >Scale image to width</label>
+		</div>			
+		<div class="szetting">
+			<label><input id="repeatImage" type="checkbox" >Repeat image (if not big enough)</label>
+		</div>			
+		<div class="szetting">
+			<label><input id="animScramble" type="checkbox" >Animated scramble on page load</label>
+		</div>
+		<div class="szetting">
+			<label><input id="numberedTiles" type="checkbox" >Numbered tiles</label>
+		</div>
+		<!--
+		<div class="myButton upDateSett"><a>Update links</a></div>
+		-->
+		<div class="clearboth"></div>
+		<div class="szetting rezultatLink">
+			<label>Generated link:</label><input class="css-input" type="text" name="generatedLinkem" id="generatedLinkem" value="" />
+		</div>
+		<div class="myButton openButton"><span id="szubmitLink"><a>Open &gt;</a></span></div>
+		<div class="szetting rezultatIframe">
+			<label>Iframe:</label><input class="css-input" type="text" name="generatedFramem" id="generatedFramem" value="" />
+		</div>
+	</div>
+</div>
+<div class="buttonz bottomButtonz">
+	<div onClick="instantScramble();" class="myButton scrambleGomb">
+		Scramble
+	</div>
+	<div class="stepCounter">
+		<span id="lepesSzamolo"> </span>
+	</div>
+	<a href="/twisty-puzzles/sliding-15-puzzle/" title="How to solve the 15-puzzle" class="myButton howToSolve">
+		How to solve?
+	</a>			
+	<div class="clearboth">
+	</div>
+</div>
+<div class="freestarwrap" id="ruwix_billboard_incontent_2"><script data-cfasync="false">freestar.config.enabled_slots.push({ placementName: "ruwix_billboard_incontent_2", slotId: "ruwix_billboard_incontent_2" });</script></div>
+<div class="mainarticle">
+	<div class="thumbsup">
+		<div class="fb-like" data-href="https://www.facebook.com/online.rubiks.cube.solver" data-width="300" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+	 </div>
+	 <article>
+		<h1><a href="/twisty-puzzles/sliding-15-puzzle/" title="Sliding 15-puzzle">Sliding 15 Puzzle With Your Image</a></h1>
+		<a href="/twisty-puzzles/sliding-15-puzzle/" title="Sliding 15-puzzle"><img class="imageright" src="sliding-15-puzzle.jpg" alt="sliding 15-puzzle 8-puzzle your image" /></a>
+		<p><strong>Set up a sliding puzzle with your own image and challenge your friends to solve it. Use any image URL from the web. The generated puzzle will work on mobile devices as well.</strong>
+		</p><p>
+		Preferably your image should be 540px x 540px or any square image. If it's bigger or smaller then you can check the <strong>Scale image</strong> checkbox to request aligning the width of your image to the width of the puzzle area. If your image is bigger than 540 x 540 pixels the program will automatically crop the image and display only the top left corner.
+		</p><p>
+		If your image is landscape and the scale image option is active then the bottom of the playing field will remain empty. To eliminate this you can choose to <strong>Repeat the image</strong>, which will replicate the image as many times it's necessary to fill the whole area.
+		</p><p>			
+		By default when you load the page the puzzle is scrambled. You can optionally activate an <strong>Animated scramble</strong> which delays the scramble so the player can examine the solved state. The animated scramble is executed once the page has been loaded.
+		</p><p>
+		<strong>Numbered tiles</strong> help the players determine where a piece belongs. The tiles are numbered starting from the upper left corner in solved state.
+		</p><!--<p>
+		To set up a Facebook profile image for the puzzle simply type the desired profile or page ID in the textbox. To determine someone's ID go to his main Facebook page and copy the section between the domain name andthe first questionmark as marked with bold text on the example below: <br />
+		<em>www.facebook.com&shy;/<span style="font-weight: bold; color: #fff;">LeonardoDiCaprio</span>?fref=ts</em><br />
+		If you fill both text boxes, setting up both general image and Facebook profile the latter will be the valid.	
+		</p>-->
+		<p>Each time you click the <strong>Submit</strong> button the URL of this page changes containing all changes you have made to the settings. Save your generated link to access your custom puzzle page again at any time!</p>
+		<a name="upload"></a>
+		<h3>Upload an image</h3>
+		<p>To upload an image I recommend using <a rel="nofollow" href="https://postimage.org/" target="_blank">PostImage.org</a> which is a free service. It stores your uploaded images on a server which you can later access with a URL. For this puzzle program use the direct link, the one which contains the extension of your uploaded image. </p>
+		<h3>Shorten URL</h3>
+		<p>Use <a href="https://goo.gl/" target="_blank">goo.gl</a> to shorten your links when the generated URL is too long.</p>
+	</article>
+	<div class="copyright">
+		&copy;&nbsp;Ruwix.com
+	</div>
+</div>
+<script src="/img/jquery3-2-0.js"></script>
+<script src="https://www.google.com/jsapi"></script>
+<SCRIPT SRC="15puzzle.js"></SCRIPT>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-31683673-1"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-31683673-1');</script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+
+
+  <!-- PLEASE NO CHANGES BELOW THIS LINE (UNTIL I SAY SO) -->
+  <script language="javascript" type="text/javascript" src="libraries/p5.min.js"></script>
+  <script language="javascript" type="text/javascript" src="libraries/p5.dom.min.js"></script>
+  <script language="javascript" type="text/javascript" src="spinwebversion.js"></script>
+  <!-- OK, YOU CAN MAKE CHANGES BELOW THIS LINE AGAIN -->
+
+  <!-- This line removes any default padding and style.
+       You might only need one of these values set. -->
+  <style> body { padding: 0; margin: 0;} video { width: 100%; max-width: 1980;}</style>
+
+  <div id="p5_loading">
+    <div id="progress">
+      <div id="bar"></div>
+    </div>
+    <div id="textbox">
+      <h1>You Spin Me Right Round, Baby</h1>
+      <h2>Loading. It might take a minute.</h2>
+    </div>
+  </div>
+  <style>
+    #p5_loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      background-color: 0;
+    }
+
+
+    h1, h2 {
+      display: block;
+      text-align: center;
+      font-family: 'Helvetica', 'Arial', sans-serif;
+      width: 100%;
+    }
+
+    h1 {font-size: 16pt;}
+    h2 {font-size: 12pt;}
+
+    #textbox {
+      padding: 20px;
+      max-width: 400px;
+      width: 80%;
+      border-radius: 8px;
+      background-color: #FFF;
+      animation: loader 4s infinite;
+      color: #000;
+    }
+
+  @keyframes loader {
+      0% {transform: rotate(0deg);}
+      10% {transform: rotate(180deg);}
+      20% {transform: rotate(360deg);}
+      20.0001% {transform: rotate(0deg);}
+  }
+
+
+  </style>
+</head>
+
+<body>
+</body>
+</html>

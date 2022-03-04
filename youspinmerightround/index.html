@@ -1,0 +1,83 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>You Spin Me Right Round, Baby :: Charlie Dean</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="apple-touch-icon" href="/icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" href="/css/featherlight.css">
+  <!-- bad practice incoming! -->
+  <style>
+    body {background-color: #000 !important; color: #eee !important; a:hover {color: #FFF !important;}}
+
+  </style>
+
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <!-- Add your site or application content here -->
+	<div id="wrapper-gallery" style="max-width: 750px;">
+		<header>
+			<div id="headertext">
+                <h1 id="title"><a href="/">Charlie Dean</a></h1>
+				<ul class="details">
+          <li>Baltimore --> Chicago</li>
+          <li><a href="//charliedean.shop"><strong>MY SHOP</strong></a> // <a href="/about"><strong>ABOUT</strong></a></li>
+					<li><a href="mailto:charlie@charliedean.net"><strong>EMAIL ME</strong></a> // <a href="//instagram.com/chrliedean"><strong>INSTAGRAM</strong></a></li>
+				</ul>
+			</div>
+			<a href="/"><div id="me"></div></a>
+		</header>
+
+		<section>
+			<h2>YOU SPIN ME RIGHT ROUND, BABY</h2>
+      <p class="gallery-text">
+        This is an interactive projection piece I made at the School of the Art Institute of Chicago. An image is projected on a wall-mounted circle which the viewer can freely rotate. Spinning the circle simulates the act of spinning a dryer drum containing me and some clothing.
+        In the video below, a person interacts with the piece.
+      <div class="resp11">
+      <iframe class="resp11gallery" src="https://player.vimeo.com/video/416076971" width="640" height="640" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+      </div>
+
+      <p class="gallery-text">
+        It involves a 26" plywood disk attached to a rotary encoder. The rotary encoder sends data to an <a href="//arduino.cc">Arduino,</a> which passes the current
+        rotation position of the disk to a laptop over serial input. The laptop is running <a href="//processing.org">Processing,</a> and picks up the serial input and uses it to scrub through the video.<br>
+        I built a version for the web below, so you can try it at home. It's very fun.</p>
+        <div class="resp11">
+        <iframe src="spin.html" width="640" height="640" frameborder="0"></iframe>
+        </div>
+
+
+
+		</section>
+
+
+
+        <div id="drawing"></div>
+
+
+	</div>
+
+	<script src="/js/vendor/modernizr-3.6.0.min.js"></script>
+	<script src="/js/main.js"></script>
+
+	<script>
+	window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+	ga('create', 'UA-128824761-1', 'auto'); ga('send', 'pageview')
+	</script>
+	<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+
+</html>
